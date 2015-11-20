@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @frecuente.descripcion %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @frecuente.cliente %>
+</p>
+
+<%= link_to 'Edit', edit_frecuente_path(@frecuente) %> |
+<%= link_to 'Back', frecuentes_path %>

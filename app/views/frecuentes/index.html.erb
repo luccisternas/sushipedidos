@@ -1,0 +1,27 @@
+<h1>Listing frecuentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Cliente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @frecuentes.each do |frecuente| %>
+      <tr>
+        <td><%= frecuente.descripcion %></td>
+        <td><%= frecuente.cliente %></td>
+        <td><%= link_to 'Show', frecuente %></td>
+        <td><%= link_to 'Edit', edit_frecuente_path(frecuente) %></td>
+        <td><%= link_to 'Destroy', frecuente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Frecuente', new_frecuente_path %>
